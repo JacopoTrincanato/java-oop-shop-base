@@ -8,7 +8,7 @@ public class Prodotto {
     Random random = new Random();
 
     // caratteristiche
-    int codice = random.nextInt(100);
+    int codice = random.nextInt();
     String nome;
     String descrizione;
     float prezzo;
@@ -23,17 +23,17 @@ public class Prodotto {
     }
 
     // metodo per il prezzo base
-    public float prezzoBase() {
-        return this.prezzo;
+    public String prezzoBase() {
+        return "Il prezzo base è " + this.prezzo;
     }
 
     // metodo per il prezzo comprensivo di iva
-    public float prezzoConIva() {
-        return this.prezzo * (1 + this.iva);
+    public String prezzoConIva() {
+        return "Il prezzo comprensivo di iva è " + this.prezzo * (1 + this.iva);
     }
 
     // metodo per il nome esteso
     public String nomeEsteso() {
-        return this.codice + "-" + this.nome;
+        return "Il nome esteso del prodotto è " + this.codice + "-" + this.nome;
     }
 }
