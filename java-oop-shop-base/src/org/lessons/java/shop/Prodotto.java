@@ -23,8 +23,8 @@ public class Prodotto {
     }
 
     // metodo per il prezzo comprensivo di iva
-    public void prezzoConIva(float prezzo) {
-        this.prezzo = prezzo * (1 + this.iva);
+    public float prezzoConIva() {
+        return this.prezzo * (1 + this.iva);
     }
 
     // metodo per il nome esteso
