@@ -1,16 +1,21 @@
 package org.lessons.java.shop;
 
+import java.util.Random;
+
 public class Prodotto {
+
+    // creo una variabile random
+    Random random = new Random();
+
     // caratteristiche
-    int codice;
+    int codice = random.nextInt(100);
     String nome;
     String descrizione;
     float prezzo;
     float iva;
 
     // costruttore
-    public Prodotto(int codice, String nome, String descrizione, float prezzo, float iva) {
-        this.codice = codice;
+    public Prodotto(String nome, String descrizione, float prezzo, float iva) {
         this.nome = nome;
         this.descrizione = descrizione;
         this.prezzo = prezzo;
@@ -18,8 +23,8 @@ public class Prodotto {
     }
 
     // metodo per il prezzo base
-    public void prezzoBase(float prezzo) {
-        this.prezzo = prezzo;
+    public float prezzoBase() {
+        return this.prezzo;
     }
 
     // metodo per il prezzo comprensivo di iva
@@ -28,7 +33,7 @@ public class Prodotto {
     }
 
     // metodo per il nome esteso
-    public void nomeEsteso(String nome) {
-        nome = this.codice + "-" + this.nome;
+    public String nomeEsteso() {
+        return this.codice + "-" + this.nome;
     }
 }
