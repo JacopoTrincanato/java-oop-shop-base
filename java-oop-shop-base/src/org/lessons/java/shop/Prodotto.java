@@ -1,21 +1,23 @@
 package org.lessons.java.shop;
 
 import java.util.Random;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 public class Prodotto {
 
-    // creo una variabile random
-    Random random = new Random();
-
     // caratteristiche
-    int codice = random.nextInt();
+    private int codice;
     String nome;
     String descrizione;
-    float prezzo;
-    float iva;
+    BigDecimal prezzo;
+    BigDecimal iva;
 
     // costruttore
-    public Prodotto(String nome, String descrizione, float prezzo, float iva) {
+    public Prodotto(String nome, String descrizione, BigDecimal prezzo, BigDecimal iva) {
+        // creo una variabile random
+        Random random = new Random();
+        this.codice = random.nextInt(100000);
         this.nome = nome;
         this.descrizione = descrizione;
         this.prezzo = prezzo;
@@ -29,7 +31,7 @@ public class Prodotto {
 
     // metodo per il prezzo comprensivo di iva
     public String prezzoConIva() {
-        return "Il prezzo comprensivo di iva è " + this.prezzo * (1 + this.iva);
+        return "Il prezzo comprensivo di iva è " + prezzo.add(prezzo.multiply(iva).setScale(2, RoundingMode.DOWN));
     }
 
     // metodo per il nome esteso
