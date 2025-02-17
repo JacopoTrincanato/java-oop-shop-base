@@ -8,6 +8,12 @@ public class Main {
         // creo un nuovo prodotto
         Prodotto pc = new Prodotto("pc", "questo è un pc", new BigDecimal(639), new BigDecimal(0.22));
 
+        // creo un nuovo termosifone
+        Prodotto termosifone = new Prodotto();
+
+        // test prezzo base
+        System.out.println(termosifone.getPrezzoBase());
+
         // test prezzo base
         System.out.println(pc.getPrezzoBase());
 
@@ -17,6 +23,7 @@ public class Main {
         // test nome Esteso
         System.out.println(pc.getNomeEsteso());
 
+        // test codice
         System.out.println(pc.getCodice());
 
     }

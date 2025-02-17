@@ -24,6 +24,17 @@ public class Prodotto {
         this.iva = iva;
     }
 
+    // costruttore due
+    public Prodotto() {
+        // creo una variabile random
+        Random random = new Random();
+        this.codice = random.nextInt(1000);
+        nome = "termosifone";
+        descrizione = "questo è un termosifone";
+        prezzo = new BigDecimal(350);
+        iva = new BigDecimal(0.1);
+    }
+
     // metodo per il codice
     public String getCodice() {
         return "Il codice del prodotto è " + this.codice;
