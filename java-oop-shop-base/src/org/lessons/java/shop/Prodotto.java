@@ -24,9 +24,29 @@ public class Prodotto {
         this.iva = iva;
     }
 
+    // metodo per il codice
+    public String getCodice() {
+        return "Il codice del prodotto è " + this.codice;
+    }
+
     // metodo per il prezzo base
     public String getPrezzoBase() {
         return "Il prezzo base è " + this.prezzo;
+    }
+
+    // metodo per il nome
+    public String getNome() {
+        return "Il nome del prodotto è " + this.nome;
+    }
+
+    // metodo per la descrizione
+    public String getDescrizione() {
+        return "la descrizione del prodotto è " + this.descrizione;
+    }
+
+    // metodo per l'iva
+    public String getIva() {
+        return "l'iva del prodotto è " + this.iva;
     }
 
     // metodo per il prezzo comprensivo di iva
@@ -44,8 +64,18 @@ public class Prodotto {
         this.prezzo = prezzo;
     }
 
-    // metodo per settare il nome esteso
-    public String setNomeEsteso() {
-        return "Il nome esteso del prodotto è " + this.codice + "-" + this.nome;
+    // metodo per settare il nome
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    // metodo per settare la descrizione
+    public void setDescrizione(String descrizione) {
+        this.descrizione = descrizione;
+    }
+
+    // metodo per settare l'iva
+    public void setIva(BigDecimal iva) {
+        this.iva = iva;
     }
 }

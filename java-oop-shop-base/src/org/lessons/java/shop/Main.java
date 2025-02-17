@@ -8,14 +8,16 @@ public class Main {
         // creo un nuovo prodotto
         Prodotto pc = new Prodotto("pc", "questo è un pc", new BigDecimal(639), new BigDecimal(0.22));
 
-        // test prezzoBase()
+        // test prezzo base
         System.out.println(pc.getPrezzoBase());
 
-        // test prezzoConIva()
+        // test prezzo con Iva
         System.out.println(pc.getPrezzoConIva());
 
-        // test nomeEsteso()
+        // test nome Esteso
         System.out.println(pc.getNomeEsteso());
+
+        System.out.println(pc.getCodice());
 
     }
 }
