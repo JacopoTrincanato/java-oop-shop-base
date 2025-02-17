@@ -8,10 +8,10 @@ public class Prodotto {
 
     // caratteristiche
     private int codice;
-    public String nome;
-    public String descrizione;
-    public BigDecimal prezzo;
-    public BigDecimal iva;
+    private String nome;
+    private String descrizione;
+    private BigDecimal prezzo;
+    private BigDecimal iva;
 
     // costruttore
     public Prodotto(String nome, String descrizione, BigDecimal prezzo, BigDecimal iva) {
