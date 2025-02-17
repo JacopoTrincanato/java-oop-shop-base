@@ -9,12 +9,13 @@ public class Main {
         Prodotto pc = new Prodotto("pc", "questo è un pc", new BigDecimal(639), new BigDecimal(0.22));
 
         // test prezzoBase()
-        System.out.println(pc.prezzoBase());
+        System.out.println(pc.getPrezzoBase());
 
         // test prezzoConIva()
-        System.out.println(pc.prezzoConIva());
+        System.out.println(pc.getPrezzoConIva());
 
         // test nomeEsteso()
-        System.out.println(pc.nomeEsteso());
+        System.out.println(pc.getNomeEsteso());
+
     }
 }
